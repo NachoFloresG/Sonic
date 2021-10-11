@@ -1,0 +1,39 @@
+ion-title {
+    font-size: 35px;
+}
+
+img {
+    max-width: 12%;
+    height: auto;
+}
+
+.box {
+    &__1 {
+        background-color: rgb(33, 117, 156);
+        width: 170px;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+    }
+    &__2 {
+        background-color: rgb(238, 20, 20);
+        width: 170px;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+    }
+    &__3 {
+        background-color: rgb(203, 214, 52);
+        width: 170px;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+    }
+    &__4 {
+        background-color: rgb(34, 182, 34);
+        width: 170px;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+    }
+}

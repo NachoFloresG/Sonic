@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'instrumentos',
+    loadChildren: () => import('./instrumentos/instrumentos.module').then( m => m.InstrumentosPageModule)
+  },
+  {
+    path: 'guitarras',
+    loadChildren: () => import('./guitarras/guitarras.module').then( m => m.GuitarrasPageModule)
+  },
 ];
 
 @NgModule({
