@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'guitarras',
     loadChildren: () => import('./guitarras/guitarras.module').then( m => m.GuitarrasPageModule)
+  },  {
+    path: 'sg',
+    loadChildren: () => import('./sg/sg.module').then( m => m.SGPageModule)
   },
+
 ];
 
 @NgModule({
