@@ -22,10 +22,15 @@ const routes: Routes = [
   {
     path: 'guitarras',
     loadChildren: () => import('./guitarras/guitarras.module').then( m => m.GuitarrasPageModule)
-  },  {
+  },
+  {
     path: 'sg',
     loadChildren: () => import('./sg/sg.module').then( m => m.SGPageModule)
+  },  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
+
 
 ];
 

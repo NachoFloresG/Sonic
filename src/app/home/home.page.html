@@ -3,17 +3,25 @@
     <div class="logo">
         <img src='assets/SONIC full.png'>
     </div>
-
     <div class="form">
-        <ion-item>
-            <ion-input [(ngModel)]='email' placeholder='Ingresar email'></ion-input>
-        </ion-item>
 
         <ion-item>
-            <ion-input [(ngModel)]='contrasena' placeholder='Contraseña' type='password'></ion-input>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input [(ngModel)]='email'></ion-input>
+        </ion-item>
+        <br>
+
+        <ion-item>
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input [(ngModel)]='password'></ion-input>
         </ion-item>
 
-        <ion-button color='dark' expand='block' routerLink="/inicio">Ingresar</ion-button>
+        <ion-button (click)='login()' expand='block'>Login</ion-button>
+        <br>
+
+        <h5 (click)='signup()'>Don't have account?
+            <ion-text color='primary'>signup here</ion-text>
+        </h5>
+
     </div>
-    <ion-button fill='clear'>Regístrate aquí</ion-button>
 </ion-content>
