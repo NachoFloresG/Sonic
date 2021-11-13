@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
+//import { PopoverController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
+import { InicioPage } from '../inicio/inicio.page';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +16,12 @@ export class HomePage implements OnInit {
 
   constructor(
     public router:Router,
-    public fireService:FireserviceService
+    public fireService:FireserviceService,
+    public navCtrl:NavController
   ) { }
 
   ngOnInit() {
   }
-
 
   login(){
     this.fireService.loginWithEmail({email:this.email,password:this.password}).then(res=>{
@@ -27,6 +30,8 @@ export class HomePage implements OnInit {
         this.fireService.getDetails({uid:res.user.uid}).subscribe(res=>{
           console.log(res);
           alert('Welcome '+ res['name']);
+          localStorage.setItem('ingresado','true');
+          this.navCtrl.navigateRoot('inicio');
         },err=>{
           console.log(err);
         });
@@ -37,8 +42,8 @@ export class HomePage implements OnInit {
     })
   }
 
-
   signup(){
     this.router.navigateByUrl('signup');
   }
+
 }
